@@ -1,0 +1,55 @@
+
+.correct{
+  color: #fff;
+  z-index: 99;
+}
+
+.incorrect{
+  color: red;
+  z-index: 99;
+}
+
+.opponent{
+  color: greenyellow;
+  z-index: 1;
+}
+
+#typeValue{
+  position: absolute;
+  z-index: -99;
+  opacity: 0;
+}
+
+.practice{
+  height: 25rem;
+}
+
+.keyboard {
+  display: grid;
+  gap: 5px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.key:hover {
+  background-color: #f0f0f0;
+}
