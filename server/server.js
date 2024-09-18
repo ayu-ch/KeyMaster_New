@@ -2,14 +2,19 @@ const express = require('express');
 const http = require('http');
 const socketIO = require('socket.io');
 const cors = require('cors');
+require('dotenv').config();
 
 
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
+
 app.use(cors({
-  origin:"http://localhost:5173"
+  origin: process.env.FRONTEND_URL
 }));
+
+
+
 const usersInRooms = {};
 
 function generateRoomId() {
@@ -102,8 +107,8 @@ io.on('connection', (socket) => {
 
 
 
-const PORT = process.env.PORT || 3001;
+// const PORT = process.env.PORT || 3001;
 
-server.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// server.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });

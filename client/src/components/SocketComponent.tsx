@@ -7,7 +7,7 @@ import { Button } from './ui/button';
 const SocketComponent = () => {
   const [roomId, setRoomId] = useState('');
   const [joinedRoom, setJoinedRoom] = useState('');
-  const serverUrl = 'http://localhost:3001'; 
+  const serverUrl = 'key-master-server.vercel.app'; 
   const socket = io(serverUrl, { transports : ['websocket'] });
   const navigate = useNavigate(); 
 
